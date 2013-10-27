@@ -8,7 +8,6 @@ namespace AerialArchitect
 {
     class Building
     {
-        public float Floating;
-        private Lua lua;
+        //public
     }
 }

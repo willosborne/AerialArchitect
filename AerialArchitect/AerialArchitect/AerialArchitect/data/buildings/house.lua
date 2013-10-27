@@ -1,0 +1,2 @@
+type = "building"
+name = "house"

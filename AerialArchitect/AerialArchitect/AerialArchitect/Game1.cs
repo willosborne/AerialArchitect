@@ -41,6 +41,9 @@ namespace AerialArchitect
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            BuildingManager.Scan();
+
+            Console.WriteLine(BuildingManager.GetPath("house"));
 
             base.Initialize();
         }
