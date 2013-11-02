@@ -42,5 +42,8 @@ namespace AerialArchitect
                 origin = value;
             }
         }
+
+        public Color Tint;
+        public float Alpha = 1;
     }
 }

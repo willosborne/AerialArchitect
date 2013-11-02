@@ -8,10 +8,18 @@
 	"buffers":
 	[
 		{
-			"contents": "function Foo()\n\nend",
+			"file": "buildings/LAYOUT",
 			"settings":
 			{
-				"buffer_size": 19,
+				"buffer_size": 899,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "buildings/house.lua",
+			"settings":
+			{
+				"buffer_size": 356,
 				"line_ending": "Windows"
 			}
 		}
@@ -19,11 +27,19 @@
 	"build_system": "Packages/C++/C++.sublime-build",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
+				"ssl",
+				"Set Syntax: Lua Dev"
+			],
+			[
 				"ssLu",
+				"Set Syntax: Lua Dev"
+			],
+			[
+				"sslu",
 				"Set Syntax: Lua Dev"
 			],
 			[
@@ -48,6 +64,12 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Noogai03/Documents/GitHub/AerialArchitect/AerialArchitect/AerialArchitect/AerialArchitect/bin/x86/Debug/data/buildings/house.lua",
+		"/C/Users/Noogai03/Documents/GitHub/AerialArchitect/AerialArchitect/AerialArchitect/AerialArchitect/data/buildings/house.lua",
+		"/C/Users/Noogai03/Documents/GitHub/AerialArchitect/AerialArchitect/AerialArchitect/AerialArchitect/data/buildings/LAYOUT",
+		"/C/Users/Noogai03/Documents/GitHub/AerialArchitect/AerialArchitect/AerialArchitect/AerialArchitect/data/test.lua",
+		"/C/Users/Noogai03/Documents/GitHub/AerialArchitect/AerialArchitect/AerialArchitect/AerialArchitect/data/buildings/testBuilding.lua",
+		"/C/Users/Noogai03/Documents/GitHub/AerialArchitect/AerialArchitect/AerialArchitect/AerialArchitect/data/foo.lua",
 		"/C/Users/Noogai03/AppData/Roaming/Sublime Text 2/Packages/User/love.sublime-build",
 		"/C/Users/Noogai03/Documents/GitHub/NLua/Samples/CLRPackage.lua",
 		"/C/Users/Noogai03/Documents/GitHub/AerialArchitect/README",
@@ -90,27 +112,56 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "buildings/LAYOUT",
 					"settings":
 					{
-						"buffer_size": 19,
+						"buffer_size": 899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								19,
-								16
+								598,
+								598
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "buildings/house.lua",
+					"settings":
+					{
+						"buffer_size": 356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

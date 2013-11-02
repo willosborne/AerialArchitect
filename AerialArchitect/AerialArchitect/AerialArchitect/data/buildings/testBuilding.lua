@@ -1,2 +1,0 @@
-type = "building"
-name = "testBuilding"

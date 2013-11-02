@@ -1,0 +1,41 @@
+LAYOUT FOR BUILDINGS:
+
+type = "building" --make sure
+key = "key here" --the key used to represent the building
+name = "name here" --the name of the building
+description = "description" --the in-game description
+
+drawableParts = {
+	{
+	imagePath = "image name",
+	offsetX = --x offset,
+	offsetY = --y offset,
+	rotation = --rotation in radians,
+	tint = {red, green, blue}
+	alpha = --alpha ( from 0 to 1)
+	},
+	--repeat for all
+}
+
+physicsShapes = {
+	rectangles = {
+		{
+		centreX = --x coord of centre,
+		centreY = --y coords of centre,
+		width = --width,
+		height = --height,
+		rotation = --rotation
+		},
+		--repeat for all rectangles. NOTE: These are FIXTURES applied to the body so positions are offsets.
+	},
+	circles = {
+		{
+		centreX = --x coord of centre,
+		centreY = --y coord of centre,
+		radius = --radius
+		},
+		--repeat for all circles
+	}
+
+}
+--<NB> ALL COORDS MUST BE IN PIXELS, NOT METRES </NB>

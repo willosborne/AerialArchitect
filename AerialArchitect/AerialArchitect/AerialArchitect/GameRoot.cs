@@ -13,20 +13,25 @@ using FarseerPhysics.Collision;
 using FarseerPhysics.Factories;
 using FarseerPhysics.Common;
 using FarseerPhysics.Controllers;
+using NLua;
 
 namespace AerialArchitect
 {
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class GameRoot : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         World world;
 
-        public Game1()
+        Building building;
+
+        //Texture2D texture;
+
+        public GameRoot()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -45,6 +50,14 @@ namespace AerialArchitect
 
             Console.WriteLine(BuildingManager.GetPath("house"));
 
+            Art.Initialize(GraphicsDevice);
+
+            world = new World(new Vector2(0, 9.82f));
+
+            BuildingManager.Initialize(world);
+
+            building = BuildingManager.CreateBuilding("house", new Vector2(100, 70));
+
             base.Initialize();
         }
 
@@ -56,6 +69,11 @@ namespace AerialArchitect
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //Lua lua = new Lua();
+            //lua.DoFile(BuildingManager.GetPath("house"));
+            //Console.WriteLine(lua["imagePath"]);
+            //texture = Art.LoadTextureStream((string)lua["imagePath"]);
 
             // TODO: use this.Content to load your game content here
         }
@@ -80,6 +98,8 @@ namespace AerialArchitect
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            world.Step((float)gameTime.ElapsedGameTime.TotalSeconds);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -92,6 +112,13 @@ namespace AerialArchitect
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            spriteBatch.Begin();
+
+            //spriteBatch.Draw(texture, new Vector2(10, 10), Color.White);
+            BuildingManager.DrawBuilding(spriteBatch, building);
+
+            spriteBatch.End();
 
             // TODO: Add your drawing code here
 
